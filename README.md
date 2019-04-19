@@ -49,12 +49,6 @@ Please help keep this project alive! Donations are welcome and will go towards f
 
 ## Preview
 
-This fork has been modified to display my resume, but all credit should go to the creator.
+This fork has been created so my resume is publicly attached to my github account. All credit to the orignal author.
 
-#### Résumé
-
-You can see [PDF](https://raw.githubusercontent.com/asamwow/Awesome-CV/master/examples/resume.pdf)
-
-| Page. 1 |
-|:---:|
-| [![Résumé](https://raw.githubusercontent.com/asamwow/Awesome-CV/master/examples/resume-0.png)](https://raw.githubusercontent.com/asamwow/Awesome-CV/master/examples/resume.pdf)  | 
+[View my resume here](https://github.com/asamwow/Awesome-CV/blob/master/examples/cv.pdf) 
