@@ -1,5 +1,5 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
 % Awesome CV LaTeX Template for CV/Resume
 %
 % This template has been downloaded from:
@@ -14,21 +14,23 @@
 %
 
 
-%-------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------
 % CONFIGURATIONS
-%-------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
+
+\usepackage{fontspec}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Specify the location of the included fonts
-\fontdir[fonts/]
+\fontdir[../fonts/]
 
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
+% awesome-nephritis, awesome-concrete, awesome-darknight
 \colorlet{awesome}{awesome-red}
 % Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
@@ -47,21 +49,21 @@
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
-%-------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
-%-------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[rectangle,edge,right]{./examples/profile}
-\name{Byungjin}{Park}
-\position{Software Architect{\enskip\cdotp\enskip}Security Expert}
-\address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
+\name{Jahnke}{Samuel}
+% \position{Software Architect{\enskip\cdotp\enskip}Security Expert}
+% \address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
 
 \mobile{(+82) 10-9030-1843}
 \email{posquit0.bj@gmail.com}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
+% \homepage{www.posquit0.com}
+% \github{posquit0}
+% \linkedin{posquit0}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -73,10 +75,10 @@
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra informations}
 
-\quote{``Be the change that you want to see in the world."}
+% \quote{``Be the change that you want to see in the world."}
 
 
-%-------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
@@ -86,24 +88,48 @@
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
-  {\today}
-  {Byungjin Park~~~·~~~Résumé}
-  {\thepage}
+{\today}
+{Samuel Jahnke~~~·~~~Résumé}
+{\thepage}
+
+\begin{cventries}
+  \cvsection{Education}
 
 
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-\input{resume/summary.tex}
-\input{resume/experience.tex}
-\input{resume/honors.tex}
-\input{resume/presentation.tex}
-\input{resume/writing.tex}
-\input{resume/committees.tex}
-\input{resume/education.tex}
-\input{resume/extracurricular.tex}
+  \cventry
+  {B.S. in Applied Math and Computer Science} % Degree
+  {California Polytechnic State University} % Institution
+  {San Luis Obispo, California} % Location
+  {Expected Summer 2019} % Date(s)
+  {
+    \begin{cvitems} % Description(s) bullet points
+      \item {3.86 GPA}
+    \end{cvitems}
+  }
 
+  \cvsection{Experience}
 
-%-------------------------------------------------------------------------------
+  \cventry
+  {Software Architect} % Job title
+  {Omnious. Co., Ltd.} % Organization
+  {Seoul, S.Korea} % Location
+  {Jun. 2017 - May. 2018} % Date(s)
+  {
+    \begin{cvitems} % Description(s) of tasks/responsibilities
+      \item {Provisioned an easily managable hybrid infrastructure(Amazon AWS + On-premise) utilizing IaC(Infrastructure as Code) tools like Ansible, Packer and Terraform.}
+      \item {Built fully automated CI/CD pipelines on CircleCI for containerized applications using Docker, AWS ECR and Rancher.}
+      \item {Designed an overall service architecture and pipelines of the Machine Learning based Fashion Tagging API SaaS product with the micro-services architecture.}
+      \item {Implemented several API microservices in Node.js Koa and in the serverless AWS Lambda functions.}
+      \item {Deployed a centralized logging environment(ELK, Filebeat, CloudWatch, S3) which gather log data from docker containers and AWS resources.}
+      \item {Deployed a centralized monitoring environment(Grafana, InfluxDB, CollectD) which gather system metrics as well as docker run-time metrics.}
+    \end{cvitems}
+  }
+
+\end{cventries}
+
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
